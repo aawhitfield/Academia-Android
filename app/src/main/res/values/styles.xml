@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    // make activity have no action bar by setting a theme in the styles.xml
+    <style name="generalnotitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+
 </resources>
