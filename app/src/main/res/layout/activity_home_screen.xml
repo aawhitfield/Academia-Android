@@ -17,4 +17,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/main_menu" />
+
+    <Button
+        android:id="@+id/HeadClassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="381dp"
+        tools:layout_editor_absoluteY="67dp" />
 </android.support.constraint.ConstraintLayout>
