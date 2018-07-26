@@ -16,13 +16,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_menu" />
+        app:srcCompat="@drawable/main_menu"
+        android:contentDescription="Main Menu Screen" />
 
     <Button
         android:id="@+id/HeadClassButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="381dp"
-        tools:layout_editor_absoluteY="67dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
