@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class HomeScreenActivity extends AppCompatActivity {
 
-    Button headToClassButton;
+    ImageButton headToClassButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
 
         // locate Head to Classroom Button
-        headToClassButton = (Button) findViewById(R.id.HeadClassButton);
+        headToClassButton = (ImageButton) findViewById(R.id.HeadClassButton);
 
         // capture button clicks
         headToClassButton.setOnClickListener(new View.OnClickListener() {
