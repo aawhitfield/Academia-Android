@@ -38,14 +38,16 @@
         app:srcCompat="@drawable/head_to_classroom_button" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/storeButton"
         android:layout_width="115dp"
         android:layout_height="154dp"
-        android:layout_marginStart="510dp"
+        android:layout_marginEnd="64dp"
         android:layout_weight="1"
-        android:background="#32000000"
+        android:background="@null"
+        android:backgroundTint="@null"
+        android:tint="@null"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/store_button" />
@@ -69,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/storeButton"
         app:layout_constraintStart_toEndOf="@+id/HeadClassButton"
         tools:layout_editor_absoluteY="80dp" />
 
