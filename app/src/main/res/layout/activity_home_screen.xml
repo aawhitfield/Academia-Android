@@ -82,4 +82,24 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="498dp" />
 
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/HeadClassButton"
+        app:srcCompat="@drawable/settings_button" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/storeButton"
+        app:srcCompat="@drawable/achievements_button" />
+
 </android.support.constraint.ConstraintLayout>
