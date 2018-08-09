@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,36 +22,50 @@
 
     <ImageButton
         android:id="@+id/HeadClassButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginStart="375dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:layout_weight="1"
-        android:alpha=".4"
-        android:background="@android:color/holo_green_dark"
+        android:alpha="0.02"
+        android:background="@null"
         android:backgroundTint="@null"
         android:contentDescription="Start game @android:string/VideoView_error_button"
         android:src="@android:color/holo_green_dark"
-        android:tint="@android:color/holo_green_dark"
+        android:tint="@null"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintHorizontal_bias="0.74"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.17" />
 
     <ImageButton
         android:id="@+id/storeButton"
-        android:layout_width="115dp"
-        android:layout_height="154dp"
-        android:layout_marginEnd="64dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
         android:layout_weight="1"
+        android:alpha="0.02"
         android:background="@null"
         android:backgroundTint="@null"
         android:tint="@null"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/store_button" />
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.17"
+        app:srcCompat="@android:color/holo_orange_dark" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -85,22 +99,35 @@
 
     <ImageButton
         android:id="@+id/settingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="0.02"
         android:background="@null"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.45"
         app:layout_constraintStart_toStartOf="@+id/HeadClassButton"
-        app:srcCompat="@drawable/settings_button" />
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.17"
+        app:srcCompat="@android:color/holo_orange_light" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/achievementsButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="0.02"
         android:background="@null"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/storeButton"
-        app:srcCompat="@drawable/achievements_button" />
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.17"
+        app:srcCompat="@android:color/holo_red_dark" />
+
 
 </android.support.constraint.ConstraintLayout>

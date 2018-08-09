@@ -23,12 +23,21 @@
             android:name=".HomeScreenActivity"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/generalnotitle" />
-        <activity android:name=".ClassroomInitialActivity"
-                  android:parentActivityName=".HomeScreenActivity">
+        <activity
+            android:name=".ClassroomInitialActivity"
+            android:parentActivityName=".HomeScreenActivity">
             <meta-data
                 android:name="android.support.HomeScreenActivity"
                 android:value="us.binarychaos.HomeScreenActivity" />
         </activity>
+        <activity
+            android:name=".Store"
+            android:parentActivityName=".HomeScreenActivity" />
+        <activity
+            android:name=".Settings"
+            android:parentActivityName=".HomeScreenActivity" />
+        <activity android:name=".Achievements"
+            android:parentActivityName=".HomeScreenActivity"></activity>
     </application>
 
 </manifest>
