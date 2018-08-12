@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Academia</string>
+    <string name="image_description_main_menu_bg">Main Menu Screen</string>
+    <string name="button_start_game">Start the Game</string>
+    <string name="button_store">Store Button</string>
+    <string name="button_settings">Settings Button</string>
+    <string name="button_achievements">Achievements Button</string>
+    <string name="splash_screen">Splash Screen</string>
 </resources>

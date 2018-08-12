@@ -25,19 +25,24 @@
             android:theme="@style/generalnotitle" />
         <activity
             android:name=".ClassroomInitialActivity"
-            android:parentActivityName=".HomeScreenActivity">
+            android:parentActivityName=".HomeScreenActivity"
+            android:label="Classroom">
             <meta-data
                 android:name="android.support.HomeScreenActivity"
                 android:value="us.binarychaos.HomeScreenActivity" />
         </activity>
         <activity
             android:name=".Store"
-            android:parentActivityName=".HomeScreenActivity" />
+            android:parentActivityName=".HomeScreenActivity"
+            android:label="Store"/>
         <activity
             android:name=".Settings"
-            android:parentActivityName=".HomeScreenActivity" />
-        <activity android:name=".Achievements"
-            android:parentActivityName=".HomeScreenActivity"></activity>
+            android:parentActivityName=".HomeScreenActivity"
+            android:label="Settings"/>
+        <activity
+            android:name=".Achievements"
+            android:parentActivityName=".HomeScreenActivity"
+            android:label="Achievements" />
     </application>
 
 </manifest>

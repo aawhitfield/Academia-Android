@@ -2,17 +2,12 @@ package us.binarychaos.academia;
 
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import static java.security.AccessController.getContext;
-
 public class MainMenu extends AppCompatActivity {
-    // set time length that splash screen will show for in miliseconds
-    private static int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +25,7 @@ public class MainMenu extends AppCompatActivity {
         this.setContentView(R.layout.activity_main_menu);
 
         // creates a new android Handler by adding a runnable to the thread and delays it by the int above
+        int SPLASH_TIME_OUT = 3000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -40,6 +36,6 @@ public class MainMenu extends AppCompatActivity {
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
             }
-        },SPLASH_TIME_OUT); // delays starting the activity by the time out amount defined
+        }, SPLASH_TIME_OUT); // delays starting the activity by the time out amount defined
     }
 }

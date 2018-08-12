@@ -5,15 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class HomeScreenActivity extends AppCompatActivity {
 
-    ImageButton headToClassButton;
-    ImageButton storeButton;
-    ImageButton settingsButton;
-    ImageButton achievementsButton;
+    private ImageButton headToClassButton;
+    private ImageButton storeButton;
+    private ImageButton settingsButton;
+    private ImageButton achievementsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
 
         // locate Head to Classroom Button
-        headToClassButton = (ImageButton) findViewById(R.id.HeadClassButton);
+        headToClassButton = findViewById(R.id.HeadClassButton);
 
         // capture button clicks
         headToClassButton.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +36,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         });
 
         // locate Store Button
-        storeButton = (ImageButton) findViewById(R.id.storeButton);
+        storeButton = findViewById(R.id.storeButton);
 
         // capture button clicks
         storeButton.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +49,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         });
 
         // locate Settings Button
-        settingsButton = (ImageButton) findViewById(R.id.settingsButton);
+        settingsButton = findViewById(R.id.settingsButton);
 
         // capture button clicks
         settingsButton.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +62,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         });
 
         // locate Achievements Button
-        achievementsButton = (ImageButton) findViewById(R.id.achievementsButton);
+        achievementsButton = findViewById(R.id.achievementsButton);
 
         // capture button clicks
         achievementsButton.setOnClickListener(new View.OnClickListener() {

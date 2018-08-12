@@ -10,7 +10,7 @@
         android:id="@+id/background"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:contentDescription="Main Menu Screen"
+        android:contentDescription="@string/image_description_main_menu_bg"
         android:scaleType="fitXY"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +31,7 @@
         android:alpha="0.02"
         android:background="@null"
         android:backgroundTint="@null"
-        android:contentDescription="Start game @android:string/VideoView_error_button"
+        android:contentDescription="@string/button_start_game"
         android:src="@android:color/holo_green_dark"
         android:tint="@null"
         android:visibility="visible"
@@ -53,49 +53,18 @@
         android:alpha="0.02"
         android:background="@null"
         android:backgroundTint="@null"
+        android:contentDescription="@string/button_store"
         android:tint="@null"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.4"
         app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent="0.17"
         app:srcCompat="@android:color/holo_orange_dark" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="12dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="160dp" />
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/storeButton"
-        app:layout_constraintStart_toEndOf="@+id/HeadClassButton"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="498dp" />
 
     <ImageButton
         android:id="@+id/settingsButton"
@@ -104,6 +73,7 @@
         android:layout_marginBottom="24dp"
         android:alpha="0.02"
         android:background="@null"
+        android:contentDescription="@string/button_settings"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_default="percent"
@@ -120,6 +90,7 @@
         android:layout_marginBottom="24dp"
         android:alpha="0.02"
         android:background="@null"
+        android:contentDescription="@string/button_achievements"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/storeButton"
