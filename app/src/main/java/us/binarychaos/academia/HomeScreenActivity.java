@@ -32,6 +32,7 @@ public class HomeScreenActivity extends AppCompatActivity {
                 // Start Head to Classroom Activity
                 Intent myIntent = new Intent(HomeScreenActivity.this, ClassroomInitialActivity.class);
                 startActivity(myIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
