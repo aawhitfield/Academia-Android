@@ -1,8 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ClassroomInitialActivity">
 
+    <ImageView
+        android:id="@+id/headerBackgroundBar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/background_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/header_meter_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBackgroundBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/healthBar"
+        android:layout_width="163dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/health_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBackgroundBar"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/headerBackgroundBar"
+        app:srcCompat="@android:color/holo_green_dark" />
+
+    <ImageView
+        android:id="@+id/clockBackground"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/clock_background"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBackgroundBar"
+        app:layout_constraintEnd_toEndOf="@+id/headerBackgroundBar"
+        app:layout_constraintTop_toTopOf="@+id/headerBackgroundBar"
+        app:srcCompat="@android:color/white" />
+
+    <TextView
+        android:id="@+id/labelEndOfClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/label_end_of_class"
+        android:text="@string/label_end_of_class"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBackgroundBar"
+        app:layout_constraintEnd_toStartOf="@+id/clockBackground"
+        app:layout_constraintTop_toTopOf="@+id/headerBackgroundBar" />
+
+    <ImageView
+        android:id="@+id/carpet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:contentDescription="@string/background_view"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBackgroundBar"
+        app:srcCompat="@mipmap/carpet" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/label_timer"
+        android:text="@string/timer_amount"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/clockBackground"
+        app:layout_constraintEnd_toEndOf="@+id/clockBackground"
+        app:layout_constraintStart_toStartOf="@+id/clockBackground"
+        app:layout_constraintTop_toTopOf="@+id/clockBackground" />
+
+    <ImageButton
+        android:id="@+id/imageStudent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/student2"
+        app:layout_constraintEnd_toEndOf="@+id/carpet"
+        app:layout_constraintStart_toEndOf="@+id/imageStudent1"
+        app:layout_constraintTop_toTopOf="@+id/carpet"
+        app:srcCompat="@mipmap/student2" />
+
+    <ImageButton
+        android:id="@+id/imageLight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/lightbulb1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/carpet"
+        app:srcCompat="@mipmap/lightbulb_off" />
+
+    <ImageButton
+        android:id="@+id/imageStudent1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/student1"
+        app:layout_constraintStart_toEndOf="@+id/imageLight1"
+        app:layout_constraintTop_toTopOf="@+id/carpet"
+        app:srcCompat="@mipmap/student1" />
 </android.support.constraint.ConstraintLayout>

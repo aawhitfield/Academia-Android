@@ -6,4 +6,16 @@
     <string name="button_settings">Settings Button</string>
     <string name="button_achievements">Achievements Button</string>
     <string name="splash_screen">Splash Screen</string>
+    <string name="background_bar">Background Bar</string>
+    <string name="header_meter_label">Burn Out-O-Meter</string>
+    <string name="health_bar">Health Bar</string>
+    <string name="clock_background">Clock Background</string>
+    <string name="label_end_of_class">End of Class</string>
+    <string name="background_carpet">Carpet Background</string>
+    <string name="timer_amount">3:00</string>
+    <string name="label_timer">Timer</string>
+    <string name="student1">Student 1</string>
+    <string name="student2">Student 2</string>
+    <string name="lightbulb1">Light Bulb 1</string>
+    <string name="background_view">Background of the View</string>
 </resources>
