@@ -105,7 +105,7 @@
         android:layout_marginTop="16dp"
         android:background="@null"
         android:contentDescription="@string/student2"
-        app:layout_constraintEnd_toEndOf="@+id/carpet"
+        app:layout_constraintEnd_toStartOf="@+id/imageStudent3"
         app:layout_constraintStart_toEndOf="@+id/imageStudent1"
         app:layout_constraintTop_toTopOf="@+id/carpet"
         app:srcCompat="@mipmap/student2" />
@@ -132,4 +132,106 @@
         app:layout_constraintStart_toEndOf="@+id/imageLight1"
         app:layout_constraintTop_toTopOf="@+id/carpet"
         app:srcCompat="@mipmap/student1" />
+
+    <ImageButton
+        android:id="@+id/imageLight2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/lightbulb2"
+        app:layout_constraintEnd_toStartOf="@+id/imageStudent2"
+        app:layout_constraintTop_toTopOf="@+id/carpet"
+        app:srcCompat="@mipmap/lightbulb_on" />
+
+    <ImageButton
+        android:id="@+id/imageStudent3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/student3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/carpet"
+        app:srcCompat="@mipmap/student_3" />
+
+    <ImageButton
+        android:id="@+id/imageLight3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/lightbulb3"
+        app:layout_constraintEnd_toStartOf="@+id/imageStudent3"
+        app:layout_constraintTop_toTopOf="@+id/carpet"
+        app:srcCompat="@mipmap/lightbulb_off" />
+
+    <ImageButton
+        android:id="@+id/imageStudent4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:contentDescription="@string/student4"
+        app:layout_constraintBottom_toBottomOf="@+id/carpet"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:srcCompat="@mipmap/student_4" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@null"
+        android:contentDescription="@string/lightbulb4"
+        app:layout_constraintStart_toStartOf="@+id/carpet"
+        app:layout_constraintTop_toTopOf="@+id/imageStudent4"
+        app:srcCompat="@mipmap/lightbulb_on" />
+
+    <ImageButton
+        android:id="@+id/imageStudent5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:contentDescription="@string/student5"
+        app:layout_constraintBottom_toBottomOf="@+id/carpet"
+        app:layout_constraintEnd_toStartOf="@+id/imageStudent6"
+        app:layout_constraintStart_toEndOf="@+id/imageStudent4"
+        app:srcCompat="@mipmap/student_5" />
+
+    <ImageButton
+        android:id="@+id/imageStudent6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:contentDescription="@string/student6"
+        app:layout_constraintBottom_toBottomOf="@+id/carpet"
+        app:layout_constraintEnd_toEndOf="@+id/carpet"
+        app:srcCompat="@mipmap/student_6" />
+
+    <ImageButton
+        android:id="@+id/imageLight5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@string/lightbulb5"
+        app:layout_constraintEnd_toStartOf="@+id/imageStudent5"
+        app:layout_constraintTop_toTopOf="@+id/imageStudent5"
+        app:srcCompat="@mipmap/lightbulb_off" />
+
+    <ImageButton
+        android:id="@+id/imageLight6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@string/lightbulb6"
+        app:layout_constraintEnd_toStartOf="@+id/imageStudent6"
+        app:layout_constraintTop_toTopOf="@+id/imageStudent6"
+        app:srcCompat="@mipmap/lightbulb_on" />
 </android.support.constraint.ConstraintLayout>

@@ -18,4 +18,13 @@
     <string name="student2">Student 2</string>
     <string name="lightbulb1">Light Bulb 1</string>
     <string name="background_view">Background of the View</string>
+    <string name="lightbulb2">Light Bulb 2</string>
+    <string name="student3">Student 3</string>
+    <string name="lightbulb3">Light Bulb 3</string>
+    <string name="student4">Student 4</string>
+    <string name="lightbulb4">Light Bulb 4</string>
+    <string name="lightbulb5">Light Bulb 5</string>
+    <string name="lightbulb6">Light Bulb 6</string>
+    <string name="student5">Student 5</string>
+    <string name="student6">Student 6</string>
 </resources>
