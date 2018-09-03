@@ -1,12 +1,64 @@
 package us.binarychaos.academia;
 
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import java.util.Objects;
 
 public class ClassroomInitialActivity extends AppCompatActivity {
+
+    TextView timeLeft;
+
+    int minutes = 3;
+    int seconds = 1;
+    int timeInMiliseconds = (minutes * 60 + seconds + 2) * 1000;
+
+    // create count down timer to represent amount of class left in the period
+    final CountDownTimer countDownTimer = new CountDownTimer( timeInMiliseconds, 1000)
+    {
+        @Override
+        public void onTick(long millisUntilFinished) {
+            if(minutes >= 0)    // timer will run while time is still on the clock
+            {
+                if(seconds == 0)// sets when to reset seconds at the start of next minute
+                {
+                    minutes--;  // decrements minutes when switches to next minute
+                    seconds = 59;   // resets seconds at the starts of the next minute
+                }
+                else
+                {
+                    seconds--;  // decrements timer by one
+                }
+
+                if(seconds >= 10)
+                {
+                    timeLeft.setText(Integer.toString(minutes) + ":" + Integer.toString(seconds));
+                }
+                else
+                {
+                    timeLeft.setText(Integer.toString(minutes) + ":0" + Integer.toString(seconds));
+                    if(seconds == 0)
+                    {
+                        minutes--;
+                        seconds = 60;
+                    }
+                }
+            }
+            else
+            {
+                timeLeft.setText(Integer.toString(minutes) + ":0" + Integer.toString(seconds));
+                countDownTimer.cancel();
+            }
+        }
+
+        @Override
+        public void onFinish() {
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +68,8 @@ public class ClassroomInitialActivity extends AppCompatActivity {
         // create back button in action bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
+        timeLeft = findViewById(R.id.timeLeft);
+        countDownTimer.start();
 
     }
     // overrides transitions so activity goes back in reverse with the back button and app bar back button

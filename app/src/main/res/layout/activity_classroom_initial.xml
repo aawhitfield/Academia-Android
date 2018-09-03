@@ -83,7 +83,7 @@
         app:srcCompat="@mipmap/carpet" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/timeLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -142,7 +142,7 @@
         android:contentDescription="@string/lightbulb2"
         app:layout_constraintEnd_toStartOf="@+id/imageStudent2"
         app:layout_constraintTop_toTopOf="@+id/carpet"
-        app:srcCompat="@mipmap/lightbulb_on" />
+        app:srcCompat="@mipmap/lightbulb_off" />
 
     <ImageButton
         android:id="@+id/imageStudent3"
@@ -187,20 +187,17 @@
         android:contentDescription="@string/lightbulb4"
         app:layout_constraintStart_toStartOf="@+id/carpet"
         app:layout_constraintTop_toTopOf="@+id/imageStudent4"
-        app:srcCompat="@mipmap/lightbulb_on" />
+        app:srcCompat="@mipmap/lightbulb_off" />
 
     <ImageButton
         android:id="@+id/imageStudent5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:background="@null"
         android:contentDescription="@string/student5"
         app:layout_constraintBottom_toBottomOf="@+id/carpet"
-        app:layout_constraintEnd_toStartOf="@+id/imageStudent6"
-        app:layout_constraintStart_toEndOf="@+id/imageStudent4"
+        app:layout_constraintStart_toStartOf="@+id/imageStudent2"
         app:srcCompat="@mipmap/student_5" />
 
     <ImageButton
@@ -208,7 +205,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:background="@null"
         android:contentDescription="@string/student6"
         app:layout_constraintBottom_toBottomOf="@+id/carpet"
@@ -233,5 +230,5 @@
         android:contentDescription="@string/lightbulb6"
         app:layout_constraintEnd_toStartOf="@+id/imageStudent6"
         app:layout_constraintTop_toTopOf="@+id/imageStudent6"
-        app:srcCompat="@mipmap/lightbulb_on" />
+        app:srcCompat="@mipmap/lightbulb_off" />
 </android.support.constraint.ConstraintLayout>
