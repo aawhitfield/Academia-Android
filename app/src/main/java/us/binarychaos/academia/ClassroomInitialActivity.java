@@ -1,6 +1,9 @@
 package us.binarychaos.academia;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.CountDownTimer;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -49,13 +52,37 @@ public class ClassroomInitialActivity extends AppCompatActivity {
             }
             else
             {
-                timeLeft.setText(Integer.toString(minutes) + ":0" + Integer.toString(seconds));
-                countDownTimer.cancel();
+
             }
         }
 
         @Override
-        public void onFinish() {
+        public void onFinish()
+        {
+            timeLeft.setText(R.string.time_over);
+            countDownTimer.cancel();
+
+            // 1. Instantiate an AlertDialog.Builder with its constructor
+            AlertDialog.Builder builder = new AlertDialog.Builder(ClassroomInitialActivity.this);
+
+            // 2. Chain together various setter methods to set the dialog characteristics
+            builder.setMessage(R.string.text_end_of_class)
+                    .setTitle(R.string.text_bell);
+
+            // Add the buttons
+            builder.setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                    // Return home to end game
+                    Intent myIntent = new Intent(ClassroomInitialActivity.this, HomeScreenActivity.class);
+                    startActivity(myIntent);
+                }
+            });
+
+            // 3. Get the AlertDialog from create()
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
 
         }
     };

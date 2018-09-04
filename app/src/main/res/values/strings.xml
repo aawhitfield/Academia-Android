@@ -27,4 +27,8 @@
     <string name="lightbulb6">Light Bulb 6</string>
     <string name="student5">Student 5</string>
     <string name="student6">Student 6</string>
+    <string name="button_ok">OK</string>
+    <string name="text_end_of_class">Class has ended.</string>
+    <string name="text_bell">The Bell Has Rung</string>
+    <string name="time_over">0:00</string>
 </resources>
