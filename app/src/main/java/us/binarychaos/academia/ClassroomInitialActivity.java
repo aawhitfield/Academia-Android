@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Objects;
@@ -14,6 +15,7 @@ import java.util.Objects;
 public class ClassroomInitialActivity extends AppCompatActivity {
 
     TextView timeLeft;
+    ImageView healthBar;
 
     int minutes = 3;
     int seconds = 1;
@@ -95,8 +97,15 @@ public class ClassroomInitialActivity extends AppCompatActivity {
         // create back button in action bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
+        // initialize screen objects from Design Layout View
         timeLeft = findViewById(R.id.timeLeft);
+        healthBar = findViewById(R.id.healthBar);
+
+        //start count down timer as soon as View is created
         countDownTimer.start();
+
+        // adjust size of health bar
+        healthBar.getLayoutParams().width = 81;
 
     }
     // overrides transitions so activity goes back in reverse with the back button and app bar back button
