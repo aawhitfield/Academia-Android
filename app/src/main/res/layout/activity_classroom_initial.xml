@@ -105,6 +105,7 @@
         android:layout_marginTop="16dp"
         android:background="@null"
         android:contentDescription="@string/student2"
+        android:onClick="decrementHealth"
         app:layout_constraintEnd_toStartOf="@+id/imageStudent3"
         app:layout_constraintStart_toEndOf="@+id/imageStudent1"
         app:layout_constraintTop_toTopOf="@+id/carpet"
@@ -129,6 +130,7 @@
         android:layout_marginTop="16dp"
         android:background="@null"
         android:contentDescription="@string/student1"
+        android:onClick="incrementHealth"
         app:layout_constraintStart_toEndOf="@+id/imageLight1"
         app:layout_constraintTop_toTopOf="@+id/carpet"
         app:srcCompat="@mipmap/student1" />
