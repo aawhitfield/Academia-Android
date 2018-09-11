@@ -31,6 +31,12 @@ public class ClassroomInitialActivity extends AppCompatActivity {
     double green = 120.0;
     double healthHue = 120.0;
 
+    public void backButton(View v)
+    {
+        // back button to return home
+        Intent backHomeIntent = new Intent(ClassroomInitialActivity.this, HomeScreenActivity.class);
+        startActivity(backHomeIntent);
+    }
 
     // create count down timer to represent amount of class left in the period
     final CountDownTimer countDownTimer = new CountDownTimer( timeInMiliseconds, 1000)

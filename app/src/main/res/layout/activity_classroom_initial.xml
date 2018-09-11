@@ -21,25 +21,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="8dp"
         android:text="@string/header_meter_label"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/headerBackgroundBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
 
     <ImageView
         android:id="@+id/healthBar"
         android:layout_width="163dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/health_bar"
         app:layout_constraintBottom_toBottomOf="@+id/headerBackgroundBar"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/headerBackgroundBar"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:color/holo_green_dark" />
 
     <ImageView
@@ -78,8 +80,10 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerBackgroundBar"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/carpet" />
 
     <TextView
@@ -233,4 +237,20 @@
         app:layout_constraintEnd_toStartOf="@+id/imageStudent6"
         app:layout_constraintTop_toTopOf="@+id/imageStudent6"
         app:srcCompat="@mipmap/lightbulb_off" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="23dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:onClick="backButton"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/carpet"
+        app:layout_constraintStart_toStartOf="@+id/headerBackgroundBar"
+        app:layout_constraintTop_toTopOf="@+id/headerBackgroundBar"
+        app:layout_constraintVertical_bias="0.421"
+        app:srcCompat="@mipmap/backbutton" />
 </android.support.constraint.ConstraintLayout>
