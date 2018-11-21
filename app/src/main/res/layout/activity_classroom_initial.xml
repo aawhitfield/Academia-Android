@@ -123,6 +123,8 @@
         android:layout_marginTop="16dp"
         android:background="@null"
         android:contentDescription="@string/lightbulb1"
+        android:onClick="studentSelected"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/carpet"
         app:srcCompat="@mipmap/lightbulb_off" />

@@ -1,21 +1,27 @@
 package us.binarychaos.academia;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.AbsoluteLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class ClassroomInitialActivity extends AppCompatActivity {
 
@@ -31,6 +37,104 @@ public class ClassroomInitialActivity extends AppCompatActivity {
     double green = 120.0;
     double healthHue = 120.0;
 
+    // flags
+    boolean lightBulbOnFlag = false;
+
+    public void increamentHealthFunction()
+    {
+        int tempWidth = healthBar.getLayoutParams().width;
+        tempWidth += 20;
+        if(tempWidth > maxHealthBarWidth)
+            tempWidth = maxHealthBarWidth;
+        healthBar.getLayoutParams().width = tempWidth;
+
+        updateHealthBarColor();
+    }
+
+    public void decrementHealthFunction()
+    {
+        int tempWidth = healthBar.getLayoutParams().width;
+        tempWidth -= 20;
+        if(tempWidth < minHealthBarWidth)
+            tempWidth = minHealthBarWidth;
+        healthBar.getLayoutParams().width = tempWidth;
+
+        updateHealthBarColor();
+    }
+
+    public void displayQuestion()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.question)
+                .setItems(R.array.choices_array, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        /* 2 button box
+        builder.setMessage(R.string.question)
+                .setPositiveButton(R.string.positive_choice, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // increment health
+                        // incrementHealth();
+                        increamentHealthFunction();
+                    }
+                })
+                .setNegativeButton(R.string.negative_choice, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // decrement health
+                        decrementHealthFunction();
+                    }
+
+                });
+        */
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+    }
+
+    public void turnLightBulbOff()
+    {
+        ImageView imageLight1 = findViewById(R.id.imageLight1);
+
+        if(lightBulbOnFlag == true)
+        {
+            imageLight1.setImageResource(R.drawable.lightbulb_off);
+            lightBulbOnFlag = false;
+            displayQuestion();
+        }
+    }
+
+    public void turnLightBulbOn()
+    {
+        ImageView imageLight1 = findViewById(R.id.imageLight1);
+
+        if(!lightBulbOnFlag)
+        {
+            imageLight1.setImageResource(R.drawable.lightbulb_on);
+            lightBulbOnFlag = true;
+        }
+    }
+
+    public void seeIfStudentHasAQuestion()
+    {
+       int min = 1;
+       int max = 10;
+       Random r = new Random();
+       int randNum = r.nextInt(max + 1);
+
+       if(randNum >= 8)
+       {
+           turnLightBulbOn();
+       }
+    }
+
+    public void studentSelected(View v)
+    {
+        turnLightBulbOff();
+    }
     public void backButton(View v)
     {
         // back button to return home
@@ -58,10 +162,13 @@ public class ClassroomInitialActivity extends AppCompatActivity {
                 if(seconds >= 10)
                 {
                     timeLeft.setText(Integer.toString(minutes) + ":" + Integer.toString(seconds));
+
+                    seeIfStudentHasAQuestion();
                 }
                 else
                 {
                     timeLeft.setText(Integer.toString(minutes) + ":0" + Integer.toString(seconds));
+                    seeIfStudentHasAQuestion();
                     if(seconds == 0)
                     {
                         minutes--;
@@ -123,25 +230,13 @@ public class ClassroomInitialActivity extends AppCompatActivity {
 
     public void incrementHealth(View v)
     {
-        int tempWidth = healthBar.getLayoutParams().width;
-        tempWidth += 20;
-        if(tempWidth > maxHealthBarWidth)
-            tempWidth = maxHealthBarWidth;
-        healthBar.getLayoutParams().width = tempWidth;
-
-        updateHealthBarColor();
+        increamentHealthFunction();
 
     }
 
     public void decrementHealth(View v)
     {
-        int tempWidth = healthBar.getLayoutParams().width;
-        tempWidth -= 20;
-        if(tempWidth < minHealthBarWidth)
-            tempWidth = minHealthBarWidth;
-        healthBar.getLayoutParams().width = tempWidth;
-
-        updateHealthBarColor();
+        decrementHealthFunction();
     }
 
     @Override

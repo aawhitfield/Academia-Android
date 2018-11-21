@@ -26,6 +26,7 @@
         <activity
             android:name=".ClassroomInitialActivity"
             android:parentActivityName=".HomeScreenActivity"
+            android:screenOrientation="sensorLandscape"
             android:label="Classroom">
             <meta-data
                 android:name="android.support.HomeScreenActivity"

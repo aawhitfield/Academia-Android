@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choices_array">
+        <item>
+            Choice 1
+        </item>
+        <item>
+            Choice 2
+        </item>
+        <item>
+            Choice 3
+        </item>
+    </string-array>
+</resources>
